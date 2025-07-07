@@ -12,15 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 下载按钮点击事件
-    const downloadButtons = document.querySelectorAll('.download-btn, .download-btn-large');
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('下载功能即将上线，敬请期待！');
-        });
-    });
-
     // 导航栏滚动效果
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
