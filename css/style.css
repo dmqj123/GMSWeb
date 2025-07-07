@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background: #fff;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #0056b3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+.download-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+}
+
+#hero {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.download-btn-large {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download-btn-large:hover {
+    background: #0056b3;
+}
+
+main section {
+    padding: 4rem 5%;
+}
+
+#features, #contact {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0056b3;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.feature-item h3 {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact .contact-info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+#contact .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact .contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
