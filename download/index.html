@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>应用下载 - GMSWeb</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+		.download-container {
+			max-width: 600px;
+			margin: 40px auto;
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+			padding: 32px 24px;
+		}
+		.download-title {
+			text-align: center;
+			font-size: 2rem;
+			margin-bottom: 32px;
+			color: #0056b3;
+		}
+		.platform {
+			margin-bottom: 32px;
+			padding-bottom: 24px;
+			border-bottom: 1px solid #eee;
+		}
+		.platform:last-child {
+			border-bottom: none;
+		}
+		.platform-title {
+			font-size: 1.3rem;
+			margin-bottom: 16px;
+			color: #333;
+		}
+		.download-btn, .store-btn {
+			margin: 0 8px;
+		}
+		.btn-group {
+			display: flex;
+			gap: 16px;
+		}
+		.download-btn, .store-btn {
+			flex: 1;
+			padding: 12px 0;
+			font-size: 1rem;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			color: #fff;
+		}
+		.download-btn {
+			background: #28a745;
+            padding: 12px 5px;
+		}
+		.download-btn:hover {
+			background: #218838;
+		}
+		.store-btn {
+			background: #0056b3;
+            padding: 12px 5px;
+		}
+		.store-btn:hover {
+			background: #003d80;
+            padding: 12px 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="download-container">
+		<div class="download-title">应用下载</div>
+		<div class="platform">
+			<div class="platform-title">安卓版本</div>
+			<div class="btn-group">
+				<a href="https://pan.miaostars.com/f/2vZsW/app-release.apk" class="download-btn" download>下载 APK</a>
+				<a href="" class="store-btn" target="_blank">华为应用商城下载</a>
+			</div>
+		</div>
+		<div class="platform">
+			<div class="platform-title">iOS 版本</div>
+			<div class="btn-group">
+				<a href="" class="download-btn" download>下载 IPA安装包</a>
+				<a href="gms.plist" class="store-btn" target="_blank">App Store 下载</a>
+			</div>
+		</div>
+		<div class="platform">
+			<div class="platform-title">鸿蒙版本</div>
+			<div class="btn-group">
+				<a href="https://pan.miaostars.com/f/yZety/ohos-default-signed.app" class="download-btn" download>下载 APP安装包</a>
+				<a href="https://appgallery.huawei.com/Featured" class="store-btn" target="_blank">华为应用商城下载</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

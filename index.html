@@ -17,7 +17,7 @@
                 <li><a href="#features">软件特色</a></li>
                 <li><a href="#contact">联系我们</a></li>
             </ul>
-            <a href="https://pan.miaostars.com/f/2vZsW/app-release.apk" class="download-btn">立即下载</a>
+            <a href="/download/" class="download-btn">立即下载</a>
         </nav>
     </header>
 
@@ -26,7 +26,38 @@
             <div class="hero-content">
                 <h2>智能、高效、安全的成绩管理</h2>
                 <p>我们致力于提供最专业的电子成绩单解决方案，简化您的工作流程。</p>
-                <a href="https://pan.miaostars.com/f/2vZsW/app-release.apk" class="download-btn-large">下载</a>
+                <a id="download-btn-large" href="#" class="download-btn-large">下载</a>
+                <script>
+                    function getOS() {
+                        const ua = navigator.userAgent || navigator.vendor || window.opera;
+                        if (/android/i.test(ua)) {
+                            return "Android";
+                        }
+                        if (/harmonyos/i.test(ua) || /hmos/i.test(ua)) {
+                            return "鸿蒙Next";
+                        }
+                        if (/iPad|iPhone|iPod/.test(ua) || /Macintosh/.test(ua) && 'ontouchend' in document) {
+                            return "iOS";
+                        }
+                        return "未知";
+                    }
+
+                    const os = getOS();
+                    const btn = document.getElementById('download-btn-large');
+                    if (os === "Android") {
+                        btn.textContent = "下载Android版";
+                        btn.href = "https://pan.miaostars.com/f/2vZsW/app-release.apk";
+                    } else if (os === "鸿蒙Next") {
+                        btn.textContent = "下载鸿蒙版";
+                        btn.href = "#";
+                    } else if (os === "iOS") {
+                        btn.textContent = "下载iOS版";
+                        btn.href = "#";
+                    } else {
+                        btn.textContent = "下载";
+                        btn.href = "/download";
+                    }
+                </script>
             </div>
         </section>
 
