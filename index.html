@@ -29,14 +29,19 @@
                 <a id="download-btn-large" href="#" class="download-btn-large">下载</a>
                 <script>
                     function getOS() {
-                        const ua = navigator.userAgent || navigator.vendor || window.opera;
-                        if (/android/i.test(ua)) {
-                            return "Android";
+                        const ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
+                        if (ua.indexOf('android') !== -1) {
+                            if (ua.indexOf('huawei') !== -1 || ua.indexOf('hmscore') !== -1 || ua.indexOf('harmony') !== -1) {
+                                return "HuaweiAndroid";
+                            }else{
+                                return "Android";
+                            }
+                            
                         }
-                        if (/harmonyos/i.test(ua) || /hmos/i.test(ua)) {
+                        if (ua.indexOf('harmonyos') !== -1 || ua.indexOf('openharmony') !== -1 || ua.indexOf('arkweb') !== -1) {
                             return "鸿蒙Next";
                         }
-                        if (/iPad|iPhone|iPod/.test(ua) || /Macintosh/.test(ua) && 'ontouchend' in document) {
+                        if (ua.indexOf('ipad') !== -1 || ua.indexOf('iphone') !== -1 || ua.indexOf('ipod') !== -1 || (ua.indexOf('macintosh') !== -1 && 'ontouchend' in document)) {
                             return "iOS";
                         }
                         return "未知";
@@ -44,7 +49,10 @@
 
                     const os = getOS();
                     const btn = document.getElementById('download-btn-large');
-                    if (os === "Android") {
+                    if (os === "HuaweiAndroid") {
+                        btn.textContent = "下载安卓版";
+                        btn.href = "https://appgallery.huawei.com/app/C115204915";
+                    } else if (os === "Android") {
                         btn.textContent = "下载Android版";
                         btn.href = "https://pan.miaostars.com/f/aAQsR/app-release.apk";
                     } else if (os === "鸿蒙Next") {
